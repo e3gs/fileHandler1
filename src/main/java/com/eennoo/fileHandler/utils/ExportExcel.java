@@ -79,7 +79,7 @@ public final class ExportExcel {
 		// 文本行
 		createContentRow(dataList, titleMap);
 		// 设置自动伸缩
-		// autoSizeColumn(titleMap.size());
+		autoSizeColumn(titleMap.size());
 		// 写入处理结果
 		try {
 			// 生成UUID文件名称

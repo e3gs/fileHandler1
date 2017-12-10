@@ -59,7 +59,7 @@ public class main {
 			jobbean.setPosition(ss1[5].split("</td>")[0]);
 			jobbean.setEducation(ss1[6].split("</td>")[0]);
 			jobbean.setSchool(ss1[8].replace("<spanclass=\"Common_width_12\">", "").split("</span>")[0]);
-			// System.out.println(ss1[9]);
+			System.out.println(ss1[9]);
 			String[] value1 = ss1[9].split("</span><span>")[0].split("</dt><dd><p><span>");
 			if (value1.length > 1) {
 				jobbean.setLastwork(value1[1]);
@@ -68,6 +68,9 @@ public class main {
 				jobbean.setIsdown("·ñ");
 			} else {
 				jobbean.setIsdown("ÊÇ");
+			}
+			if (ss1[9].indexOf("¹Ø¼ü×Ö£º</dt><dd><p>") >= 0) {
+				jobbean.setKeyword(ss1[9].split("¹Ø¼ü×Ö£º</dt><dd><p>")[1].split("</p></dd>")[0]);
 			}
 			//
 			jobbeans.add(jobbean);
